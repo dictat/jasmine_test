@@ -1,3 +1,20 @@
-function senddata(){
-    return $("#testmessage").textContent;
+var $ = require('jquery');
+
+function parseUserJson(userJson) {
+  return {
+    loggedIn: true,
+    fullName: userJson.firstName + ' ' + userJson.lastName
+  };
 }
+
+function fetchCurrentUser(callback) {
+  return $.ajax({
+    type: 'GET',
+    url: 'http://example.com/send',
+    success: function(userJson) {
+      callback(parseUserJson(userJson));
+    }
+  });
+}
+
+module.exports = fetchCurrentUser;

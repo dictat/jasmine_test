@@ -1,3 +1,5 @@
+const sumtotal = require('./../public/js/sumtotal');
+
 describe("sumtotal関数のテスト", function(){
     it("5+9=14", function(){
         expect(sumtotal(5, 9)).toBe(14);

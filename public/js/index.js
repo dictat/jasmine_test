@@ -3,5 +3,5 @@ function alertAnswer(){
     var first = parseInt(document.getElementById('first').value);
     var second = parseInt(document.getElementById('second').value);
     //計算結果を表示
-    alert(sum(first,second));
+    alert(sumtotal(first,second));
 }
