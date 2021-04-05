@@ -7,3 +7,6 @@ addons:
     - ubuntu-toolchain-r-test
     packages:
     - g++-5
+node_js:
+  - 'stable'
+  - 'lts/*'
